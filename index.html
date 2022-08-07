@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHONIE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="split right">
+    <section class="centered">
+      <main class="container">
+        <h1>PHONIE &#128241;</h1>
+        <br>
+        <p>Detect your mobile network provider (Nigeria Only) &#128071;</p>
+        <form id="formy">
+          <section class="view">
+            <input type="tel" name="telephone" id="telephone" class="in" placeholder="Enter phone &#9742"
+              title="Only numbers and + allowed" pattern="^[+0-9]+$" autocomplete="off" list="suggestions"
+              maxlength="14" />
+
+            <span class="display"></span>
+          </section>
+          <button type="reset" id="btn">Reset All</button>
+        </form>
+
+        <button type="buttton" class="btn_exit">Exit</button>
+        <p class="circle">Circle-64 &copy; 2022</p>
+
+        <section class="ringShow"></section>
+      </main>
+      <datalist id="suggestions">
+        <option value="0701"></option>
+        <option value="0703"></option>
+        <option value="0704"></option>
+        <option value="0705"></option>
+        <option value="0706"></option>
+        <option value="0708"></option>
+        <option value="0802"></option>
+        <option value="0803"></option>
+        <option value="0805"></option>
+        <option value="0806"></option>
+        <option value="0807"></option>
+        <option value="0808"></option>
+        <option value="0809"></option>
+        <option value="0810"></option>
+        <option value="0811"></option>
+        <option value="0812"></option>
+        <option value="0813"></option>
+        <option value="0814"></option>
+        <option value="0815"></option>
+        <option value="0816"></option>
+        <option value="0817"></option>
+        <option value="0818"></option>
+        <option value="0901"></option>
+        <option value="0902"></option>
+        <option value="0903"></option>
+        <option value="0904"></option>
+        <option value="0905"></option>
+        <option value="0906"></option>
+        <option value="0908"></option>
+        <option value="0909"></option>
+      </datalist>
+    </section>
+  </section>
+
+  <section class="split left">
+    <section class="centered">
+      <main class="container2">
+        <section class="saying">
+          <section class="word_con"><span class="first_enter">Welcome to PHONIE</span> <span class="second_enter">
+              Phonie Challenge Solution</span>
+          </section>
+          <section class="circle_1"></section>
+          <section class="circle_2"></section>
+        </section>
+
+        <section class="ranger">
+          <section class="cover"></section>
+          <section class="triangle-down"></section>
+          <section class="triangle-up"></section>
+          <section class="triangle-down2"></section>
+          <section class="mouth"></section>
+          <section class="mouth_close"></section>
+          <section class="triangle-left"></section>
+          <section class="triangle-right"></section>
+        </section>
+      </main>
+      <main class="container3">
+        <section class="netcont">
+          <section class="ring1"></section>
+          <section class="ring2"></section>
+          <section class="ring3"></section>
+          <section class="ring4"></section>
+        </section>
+
+        <img src="mtn.png" width="40px" height="40px" alt="MTN" class="ringImg" id="forMtn" />
+        <img src="airtel.png" width="40px" height="40px" alt="Airtel" class="ringImg" id="forAirtel" />
+        <img src="glo.png" width="40px" height="40px" alt="Glo" class="ringImg" id="forGlo" />
+        <img src="9mobile.png" width="40px" height="40px" alt="9mobile" class="ringImg" id="for9mobile" />
+        <button type="button" class="btn_next">Next</button>
+      </main>
+    </section>
+  </section>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+</body>
+
+</html>

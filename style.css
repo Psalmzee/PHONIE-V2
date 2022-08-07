@@ -1,0 +1,560 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #34495e;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+.heading{
+  margin: 20px 0;
+  animation: bounce-in 5s ease 0s 1 normal;
+  position: relative;
+  font-size: 20px;
+  color: gold;
+}
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 310px;
+  background: #191919;
+  border-radius: 10px;
+  padding: 10px;
+  height: 450px;
+  position: relative;
+}
+p{
+  margin: 0 10px;
+}
+#formy{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-bottom: 10px;
+  height: 250px;
+}
+.view{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  margin: 50px 0;
+}
+.view .in{
+  width: 55%;
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: none;
+  color: #FAFC3F;
+}
+.view .display{
+  width: 40%;
+  height: 60px;
+  background: none;
+  color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+#btn{
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 900;
+  outline: none;
+  width: 60%;
+  background: black;
+  color: #fff;
+}
+#btn:hover{
+  background: #181616;
+  cursor: pointer;
+}
+.in:valid{
+  border: 2px solid #3498db;
+}
+.in:invalid{
+  border: 2px solid red;
+}
+.colorful{
+  animation: colourful 5s ease 0s infinite normal;
+  margin-top: 10px;
+}
+@keyframes bounce-in{
+  0%  {color:red; left: -50px; top:-100px;} 
+  25%  {color:#fff; left:-40px; top:0px;}
+  50%  {color: #FFf; left:-30px; top: -80px;}
+  75%  {color:green; left:-20px; top: 0px;}
+  100% {color:gold; left:0px; top:0px;}
+}
+.btn_exit{
+		position: relative;
+		margin: 10px 0;
+		width: 30%;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+}
+
+.ringShow{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: animate 4s linear infinite normal;
+  top: 140px;
+  left: 175px;
+  border: 4px solid white;
+}
+.ringShow::before{
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #fff;
+}
+.ringShow::before {
+  box-shadow: 0 0 0 5px #3344c1,
+  0 0 0 10px #3344c1;
+}  
+@media screen and (min-width: 320px) and (max-width: 949px){
+  .right{
+    display: none;
+  }
+  .container2{
+		margin-left: 0px;
+	}
+  .colorful{
+    margin-top: -5px;
+  }
+}
+@media screen and (min-width: 950px){
+.container{
+  width: 450px;
+}
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  /* Control the left side
+  For the text part. */
+ .left {
+    left: 0;
+    background: #000;
+  }
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: grey;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+ .btn_next{
+		display: none;
+	}
+.ringShow{
+  width: 150px;
+  height: 150px;
+  top: 110px;
+  left: 267px;
+  }
+  .ringShow::before{
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  }
+.ringShow::before {
+  box-shadow: 0 0 0 5px #3344c1,
+  0 0 0 10px #3344c1;
+}  
+}
+.container2{
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		width: 300px;
+    animation: GetOut 5s ease 12s forwards;
+    position: absolute;
+	}
+	.ranger{
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background: linear-gradient(270deg, rgba(19,59,218,1) 50%, rgba(124,123,130,1) 50%);
+		border-radius: 50%;
+		width: 250px;
+		height: 300px;
+	}
+	.cover{
+		height: 70px;
+		width: 240px;
+		background: #fff;
+		position: absolute;
+		z-index: 4;
+		top: 80px;
+		border-radius: 120px 120px 150px 150px;
+	}
+	.triangle-down {
+		z-index: 5;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 100px solid rgb(154,155,159);
+		top: 12px;
+	}
+	.triangle-up {
+		z-index: 5;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		border-bottom: 20px solid rgb(154,155,159);
+		top: 95px;
+	}
+	.triangle-down2 {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 100px solid transparent;
+		border-right: 100px solid transparent;
+		border-top: 90px solid #fff;
+		top: 90px;
+	}
+	.triangle-left {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 45px solid transparent;
+		border-right: 90px solid rgb(154,155,159);
+		border-bottom: 45px solid transparent;
+		top: 180px;
+	}
+	.triangle-right {
+		z-index: 4;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 45px solid transparent;
+		border-left: 90px solid rgb(154,155,159);
+		border-bottom: 45px solid transparent;
+		top: 180px;
+	}
+	.mouth{
+		z-index: 5;
+		position: absolute;
+		width: 70px;
+		height: 2px;
+		top: 225px;
+		background: #fff;
+		border-radius: 70%;
+		animation: talking 6s ease 0s 2 normal;
+	}
+	.saying{
+		position: relative;
+		left: 80px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+	.word_con{
+		position: relative;
+		width: 200px;
+		height: 100px;
+		background: blue;
+		text-align: center;
+		font-weight: 900;
+		color: #fff;
+		border-radius: 30%;
+		padding: 10px;
+		margin-left: -70px;
+		display: flex;
+		flex-flow: row wrap;
+		align-self: center;
+		justify-content: center;
+	}
+	.circle_1, .circle_2{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		background: #fff;
+	}
+	.circle_1{
+		top: 10px;
+		left: 50px;
+	}
+	.circle_2{
+		top: 30px;
+		left: 45px;
+	}
+	.first_enter{
+		position: relative;
+		animation: enter 6s ease 0s 1 normal;
+	}
+	.second_enter{
+		position: relative;
+		animation: enter 6s ease 6s 1 forwards;
+		top: -1000px;
+	}
+	.btn_next{
+		z-index: 6;
+		position: absolute;
+		width: 30%;
+		left: 205px;
+		top: 380px;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(19,59,218,1) 50%);
+	}
+	.btn_exit{
+		position: relative;
+		margin-top: 5px;
+		width: 30%;
+		padding: 10px;
+		font-weight: 1000;
+		border-radius: 10px;
+		background: linear-gradient(270deg,rgba(124,123,130,1) 50%, rgba(9, 13, 28) 50%);
+	}
+	button{
+		outline: none;
+    color: #fff;
+	}
+	button:hover{
+		cursor: pointer;
+	}
+	@keyframes talking{
+		0% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		20% {
+					width: 70px;
+					height: 2px;
+					top: 225px;
+					background: #fff;
+					border-radius: 70%;
+		}
+		40% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		60% {
+					width: 70px;
+					height: 2px;
+					top: 225px;
+					background: #fff;
+					border-radius: 70%;
+		}
+		80% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+		100% {
+					width: 70px;
+					height: 30px;
+					top: 210px;
+					border-radius: 50%;
+					background-color: #fff;
+		}
+	}
+	@keyframes enter{
+		0%{
+				top: -10000px;
+				display: inline;
+		}
+		70%{
+				top: 20px;
+				display: inline;
+		}
+		100%{
+			top: 0;
+			display: inline;
+		} 
+  }
+.container3, .netcont{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto;
+}
+.container3{
+  animation: GetIn 5s ease 15s forwards;
+  top: -20000px;
+  position: relative;
+  width: 300px;
+}
+.netcont{
+  position: relative;
+  height: 440px;
+  width: 300px;
+} 
+.netcont .ring1, .netcont .ring4 {
+  margin: auto;
+  animation: animate 4s linear infinite alternate;
+}
+.netcont > section{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: animate 4s linear infinite normal;
+  border-radius: 50%;
+}
+.netcont > section::before{
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #fff;
+}
+.netcont .ring1{
+  top: 50px;
+  border: 4px solid red;
+}
+.netcont .ring1::before {
+  box-shadow: 0 0 0 5px #990f0f,
+  0 0 0 10px  #b43737;
+}   
+.netcont .ring2{
+  top: 165px;
+  left: 182px;
+  border: 4px solid #013220;
+}
+.netcont .ring2::before {
+  box-shadow: 0 0 0 5px #013220,
+  0 0 0 10px #013220;
+}   
+.netcont .ring3{
+  top: 165px;
+  right: 182px;
+  border: 4px solid #fce303;
+}
+.netcont .ring3::before {
+  box-shadow: 0 0 0 5px #fce303,
+  0 0 0 10px #fce303; 
+}
+.netcont .ring4{
+  bottom: 50px;
+  border: 4px solid #19ad09;
+}
+.netcont .ring4::before {
+  box-shadow: 0 0 0 5px #19ad09,
+  0 0 0 10px #19ad09;
+}
+  .ringImg{
+    position: absolute;
+  }
+  #forMtn{
+    top: 195px;
+    left: 50px;
+  }
+  #forAirtel{
+    top: 80px;
+  }
+  #forGlo{
+    bottom: 80px;
+  }
+  #for9mobile{
+    top: 195px;
+    right: 50px;
+  }
+  @keyframes GetOut{
+    0%{
+      opacity: 0.8;
+    }
+    30%{
+      opacity: 0.6;
+      top: -50px;
+    }
+    60%{
+      opacity: 0.4;
+      top: -100px;
+    }
+    80%{
+      opacity: 0.2;
+      top: -200px;
+    }
+    100%{
+      opacity: 0;
+      top: -200000px;
+    }
+  }
+@keyframes GetIn{
+    0%{
+      top: -90000px;
+    }
+    30%{
+      top: -250px;
+    }
+    60%{
+      top: 100px;
+    }
+    100%{
+      top: 0;
+    }
+  }
+ @keyframes animate{
+  0%
+  {
+      transform: rotate(0deg);
+  }
+  100%
+  {
+      transform: rotate(360deg);
+  }
+}
